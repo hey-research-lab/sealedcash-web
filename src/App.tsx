@@ -807,7 +807,7 @@ function Landing() {
         <div className="footer-links">
           <strong>Resources</strong>
           <a href="https://x.com/Sealed_Cash" target="_blank" rel="noreferrer" data-testid="link-landing-footer-x">X</a>
-          <a href="https://github.com/sealedcash" target="_blank" rel="noreferrer" data-testid="link-landing-footer-github">GitHub</a>
+          <a href="https://github.com/sealedcash-org" target="_blank" rel="noreferrer" data-testid="link-landing-footer-github">GitHub</a>
           <a href="https://www.torproject.org" target="_blank" rel="noreferrer" data-testid="link-landing-footer-tor">Tor</a>
           <Link href="/docs" data-testid="link-landing-footer-docs">Docs</Link>
         </div>
