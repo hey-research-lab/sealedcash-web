@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Sitemap: https://sealedcash.com/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /

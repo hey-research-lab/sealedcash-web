@@ -1,0 +1,549 @@
+{
+  "program": {
+    "artifact_version": 1,
+    "noir_version": "1.0.0-rc.3+5a7ee9bf5ed8973076df7bb0d2b723024db09ae7",
+    "hash": "2312860634",
+    "abi": {
+      "abi_version": 1,
+      "parameters": [
+        {
+          "name": "chain_id",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "pool",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "domain",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "protocol_version",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "circuit_version",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "operation",
+          "type": {
+            "kind": "integer",
+            "sign": "unsigned",
+            "width": 8
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "root",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "asset",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "public_amount",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "is_deposit",
+          "type": {
+            "kind": "boolean"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "recipient",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "relayer",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "relayer_fee",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "input_count",
+          "type": {
+            "kind": "integer",
+            "sign": "unsigned",
+            "width": 8
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "output_count",
+          "type": {
+            "kind": "integer",
+            "sign": "unsigned",
+            "width": 8
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "public_nullifiers",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "public_commitments",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "public_cipher_hashes",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "public"
+        },
+        {
+          "name": "spending_secret",
+          "type": {
+            "kind": "field"
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "input_enabled",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "boolean"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "input_amount",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "input_secret",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "input_nonce",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "input_diversifier",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "input_path",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "array",
+              "length": 32,
+              "type": {
+                "kind": "field"
+              }
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "input_path_bits",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "array",
+              "length": 32,
+              "type": {
+                "kind": "boolean"
+              }
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "output_enabled",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "boolean"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "output_amount",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "output_secret",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "output_nonce",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "output_recipient_key",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "output_diversifier",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        },
+        {
+          "name": "output_cipher_hash",
+          "type": {
+            "kind": "array",
+            "length": 2,
+            "type": {
+              "kind": "field"
+            }
+          },
+          "visibility": "private"
+        }
+      ],
+      "return_type": null,
+      "error_types": {
+        "14990209321349310352": {
+          "error_kind": "string",
+          "string": "attempt to add with overflow"
+        }
+      }
+    },
+    "bytecode": "H4sIAAAAAAAA/8Wdd3gV1dbGz+wJEHroHUIH6SAgRQm9SQdpIgaI4UAKhIReEnonhd47SBXFioIKKujegoIKSrFiQRQrigrfJvdeMuKZZ95Zzjqff+1nXMxaa7/vrN8kJ2fGTE9bvjU20h933tyR8kSrmMihI1vFj2+XFDe0dWRMTMq2ni27tm+bnrKjrz8xLmrMmGyhQFBOAwjKi5wpHxJUFElXDAl6FAmKRIKGIEFDkaBhSFAUEvQYEhSNBA1HgvxI0AgkaCQSFIMExSJBcUhQPBI0CgkajQQlIEFjkKBEJCgJCRqLBI1DgsYjQROQoIlI0CQkaDISNAUJmooETUOCZDIUlQJFTYeiZkBRM6GoWVDUbChqDhQ1F4qaB0XNh6IWQFELoahFUNRiKGoJFJUKRaVBUelQVAYUtRSKWgZFLYeiVkBRK6GoVVDUaihqDRS1FopaB0Wth6I2QFEboahNRsqulvqmJiFxQFRCfEZqWvqx8LrDuiZ8Um9j9ee6t30mJaXfoGoNvuow4flRaa0/+SXjms/nk/uOhfsc/guQ+2D3+DFR/mHxcfW7RyXEJiVGJvrj49KX3qlF3FmZWfXtsyyXyv3yCXlAPkk4ue/OyrA7+VPyoHxaPkM4udyftXzK7vTPyufk8/IFwulDAnRx18kPyRflS/Lwv6z9kN3pj8iX5Svy1b9bJT3d0QaGQOx01Pk8lMaOOvvpmHxNvi7f+Fea2PrpuDwh35RvUUo/lrU8bnd6KZV8W56knP7ZO8sidmc/Jd+R78rTlLMfcd6aM/I9+b78gHJ26Vz7WXlOfig/+ptb0zKcjVi0eBpg6eLA8HOduSSSuSRH5tJI5tIcmcsimcsyZJYb5WYkt9zMk3wrlHwrT/LtUPLtPMl3Qsl38iTfBSXfxZN8D5R8D0PyAnIjkrsAQ+pCWOpCQOrdrRL8MTH+6NuQWOpLS9neyx8XHRP1nxtWpwTIhZx5ythRMVHyfEZqKnBHcvdmOP0DuVmeh4q94LyxlOQXUgkKO553o/vzpmPOwbLvQbK7v80oe2dV2u4u46K8JD+Wn1DuYU5lLS/anf5T+Zn8XH5BOH2OO6vidie/LL+UX8mvKbWfyVpetjv9N/KK/FZepZz+0wAS3HX27+T38pr8gXD2LC1L2p38R/mT/Fn+Qin9u6zlj3an/1Vel7/J3ymn/yZr+avd6W/IP+Sf8i/Xl3H4o8jP/cr8jAESj8obWPLPXSZPXYpM2xvIT6g3gTPp3YGiWNoIR7q4hWnsmRgEk9/MWt6yMbkyfMowlCGUYbo2evlIzGtfMBg9UleOZb/MYRGdHUluhEAu/gKKYmmkPNRGNkxnz/Rwb3a91ZZ1Nlu7Z1dGDmWEKiOna7tXGIIZ7ksGuw/RlWPZv+Kxe3bIJ7kgI38JRbE0UgFqIzems2d6UOyey7LObWv3PMrIq4x8ysj/973KAPbqUecYEQntZ5jjiUJcX436igiDrgjoh3HnD3f0eSL++St7x+sWqrCgy5+QgyxfIcJAc4g3Kg7FxtnXDMN0qL4usOzf8AzTPNC2F4bG5NdQFEsjFaE2imA6e6YHZZgWtqyL2A7TosoopoziyihBmVYFMMtdYbjY9ITRVzGW/1u3TsmAXFASsukVKMq5xFDXW6RnQkkMJ6U8wkkpAk6GQhWWpuDE+bRlgiqhe5dXGoY5/CoDUobp6YBl/44HKUUhCctC4lyFolgaqQS1UQ7T2TM9KEgpa1mXs0VKuDLKK6OCMipSJlYpzHLfsyCltJ4IWP5rPEipBNn0eyjKucQw11ukZ0IlDCmVPUJKZQJShkEVVuFBStWgSuje5ZWjMIf/wICUKD0dsOw/8iAlHJKwGiTOD1AUSyOVoTaqYzp7pgcFKdUs6+q2SLlHGTWUUVMZtSgTqzJmuZ9YkFJFTwQs/888SKkN2fQnKMq5xHDXW6RnQm0MKXU8QkodAlKioArr8iClXlAldO/yKo9hDv+FASmP6emAZf+VByn3QBLWh8T5BYpiaaQK1EYDTGfP9KAgpb5l3cAWKfcqo6EyGimjMWVi1cEsd50FKXX1RMDy/8aDlPsgm16HopxLjHC9RXom3IchpYlHSGlCQMpjUIVNeZDSLKgSund51WjM4b8zICVaTwcs+w0epNwLSdgcEud3KIqlkapQG/djOnumBwUpzS3r+22R8oAyWigjQhktKROrCWa5P1iQ0lRPBCz/nzxIaQXZ9A8oyrnEZNdbpGdCKwwprT1CSmsCUqKhCtvwIKVtUCV07/JqwzGH/8WAlOF6OmDZb/Ig5QFIwnaQOH9BUSyNVIPaaI/p7JkeFKS0s6zb2yKlgzI6KqOTMjpTJlZrzHK3WJDSRk8EKH+IjwcpD0I2vYVEOZdouN8iPRMexJDSxSOkdCEgZThUYVcepHQLpoQEl1f3Yw43GJDi19MByy54kNIBkrA7JI4BRbE0An1KYvTAdPZMDwpSulvWPWyR0lMZvZTRWxl9KBOrC2Y5kwUpXfVEwPKH8CDlIcimJhTlWKJwv0V6JjyEIaWvR0jpS0CKH6qwHw9S+gdTQoLL7xmBOTwbA1JG6OmAZc/Og5SekIQDIHGyQVEsjWAfCQ3EdPZMDwpSBljWA22R8rAyBinjEWUMpkysvpjlcrAgpZ+eCFj+UB6kPArZNAcU5VhiiPst0jMB++6vEekRUiIJSBkBVTiEBylDgykhweU1RmIOz8mAlJF6OmDZc/Eg5WFIwmGQODmhKJZGakBtRGE6e6YHBSnDLOsoW6ToD0T0L7D0Dxx+ysTCvsQdkpsFKUP0RMDy5+FBygjIprmhKMcSQ91vkZ4J2E2uMdIjpIwkIGUkVGEMD1JigykhweU1YzCH52VASoyeDlj2fDxIwf5wIw4SJy8UxdJITaiNeExnz/SgICXOso63RcooZYxWRoIyxlAmFngPlZ8FKdrysVj+MB6kJEI2zQ9FOZYY5n6L9AYlYkhJ8ggpSQSkxEAVjuVByrhgSkhweS3Q4RzPIYzV0wHLXpAHKaMgCcdD4hSAolgaqQW1MQHT2TM9KEgZb1lPsEXKRGVMUsZkZUyhTKwkzHKFWJAyVk8ELH9hHqRMhWxaCIpyLDHc/RbpmTAVQ8o0j5AyjYCUWKjCZB6kpARTQoLLa8dhDi/CgJQ4PR2w7EV5kDIRknA6JE4RKIqlkdpQGzMwnT3Tg4KU6Zb1DFukzFTGLGXMVsYcysSahlmuGAtSkvVEwPIX50HKXMimxaAoxxIj3G+RnglzMaTM8wgp8whIiYMqnM+DlAXBlJDg8jrxmMNLMCAlXk8HLHtJHqTMhCRcCIlTAopiaaQO1MYiTGfP9KAgZaFlvcgWKYuVsUQZqcpIo0yseZjlSrEgZb6eCFj+0jxISYdsWgqKciwx2f0W6ZmQjiElwyOkZBCQAv0S2VjKg5RlwZSQ4PK64K+eyjAgRf9OfDGWvSwPUhZDEi6HxIEe5sbTSF2ojRWYzp7pQUHKcst6hS1SVipjlTJWK2MNZWJlYJYrx4IUXf0yLH84D1LWQjYtB0U5lWgQtkjPhLUYUtZ5hJR1BKRgvzFfz4OUDUGU0EeQsN5ozOHlGZCiP2NdiWWvwIOUlZCEGyFxykNRLI3Ug9rYhOnsmR4UpGy0rDfZImWzMrYoY6sytlEm1jrMchVZkLJeTwQsfyUepGyHbFoRinIqURC2SM+E7RhSdniElB0EpIyGKtzJg5THgyihjyBh/QTM4ZUZkJKgpwOWvQoPUjZDEu6CxKkMRbE0Uh9qYzems2d6UJCyy7LebYuUPcrYq4x9ythPmVg7MMtVZUHKTj0RsPzVeJDyBGRT6GG3jiWGELZIz4QnMKQc8AgpBwhISYAqfJIHKU8FUUIfQcIGYzCHV2dAitZzD5b9Hh6k7IEkPAiJUx2KYmkEeiCk8TSms2d6UJBy0LJ+2hYpzyjjWWU8p4znKRPrAGa5GixIeVJPBCx/TR6kvADZtAYU5VRiKGGLtPAvYEg55BFSDhGQMgaq8EUepLwURAl9BAnvxf4KPKQWA1IS9XTAstfmQcozkISHIXFqQVEsjWBPvzyC6eyZHhSkHLasj9gi5WVlvKKMV5VxlDKxDmGWq8OClBf1RMDy1+VByjHIpnWgKKcSwwhbpGfCMQwpr3mElNcISEmEKnydBylvBFFCH0HChuCf6ddjQEqSng5Y9vo8SHkZkvA4JA70FgOeRhpCbZzAdPZMDwpSjlvWJ2yR8qYy3lKGVIaiTKzXMMs1YEHK63oiYPnv5UHK25BNG0BRTiWGE7ZIz4S3MaSc9AgpJwlISYIqPMWDlHeCKKGPIGGjsZjDGzIgZayeDlj2RjxIeROS8F1InIZQFEsjjaA2TmM6e6YHBSnvWtanbZFyRhnvKeN9ZXxAmVgnMcs1ZkHKKT0RsPz38SDlLGTTxlCUU4kRhC3SM+EshpRzHiHlHAEpY6EKP+RBykdBlNBHkLAx+GXeJgxIGaenA5a9KQ9SzkASnofEaQJFsTTSGGrjAqazZ3pQkHLesr5gi5SLyrikjI+V8QllYp3DLNeMBSkf6omA5W/Og5RPIZtCb3lyLDGZsEV6JnyKIeUzj5DyGQEp46AKP+dByhdBlNBHkPC+8ZjD72dAyng9HbDsD/Ag5SIk4WVInPuhKJZG7oPa+BLT2TM9KEi5bFl/aYuUr5TxtTK+UcYVysT6DLNcCxakfK4nApY/ggcp30I2bQFFOZRo+AhbpGfCtxhSrnqElKsEpIyHKvyOBynfB0/CzE10K2GTCZjDWzIgZYKeDlj2VjxI+QqS8BokTksoiqUR6CcL4wdMZ8/0oCDlmmX9gy1SflTGT8r4WRm/UCbWVcxyrVmQ8p2eCFj+NjxI+RWyaWsoyqFE4SNskZ4Jv2JIue4RUq4TkAI9L8/4jQcpvwdPwsxNdCthU/ApW20ZkDJRTwcsezsepPwISXgDEgd6fSdPI02hNv7AdPZMDwpSbljWf9gi5U9l/KWMm8q4RZlY1zHLtWdBym96ImD5O7AgRfggm7aHohxKDPERtmiiLhHaIGF4gxRhEJACPRxQCBakCDN4EmZuolsJm03CHN6RASmT9HTAsnfiQcqfkIQhkDgdoSiWRppBbWAv1+romR4EpIgQyzqbHVJEdiVyKBGqRE7KxDIwy3XmQIoQeiJg+R/kQUouyKadoSiHEkN9hC2apEvEkJLbI6TkJiBlElRhHh6k5A2ehJmb6FbC5pMxh3dhQMpkPR2w7F1ZkCKyQxLmg8TpAkWxNNIcaiM/prNnelCQks+yzm+LlDAlCihRUIlClImVG7NcNxak5NETAcvfnQcphSGbQq83dyoxzEfYIj0TCmNIKeIRUooQkDIZqrAoD1KKBU/CzE10K+H9UzCH92BAyhQ9HbDsPXmQEgZJWBwSpwcUxdII9JG6wJ4x3MMzPShIKW5Zl7BFSkklSilRWokylIlVBLNcLxakFNUTAcvfmwcpZSGb9oKiHEoM9xG2SM+EshhSynmElHIEpEyBKgznQUr54EmYuYluJXwAe+FNSB8GpEzV0wHL/hAPUkpCElaAxOkDRbE08gDURkVMZ8/0oCClgmVd0RYplZSorEQVJapSJlY5zHJ9WZASricClr8fD1KqQTbtC0U5lBjhI2yRngnVMKRU9wgp1QlImQpVeA8PUmoET8LMTXQrYQvwjUT9GZAyTU8HLPsAHqRUgiSsCYnTH4piaaQF1Ab2qJX+nulBQUpNy7qWLVJqK1FHibpK1KNMrOqY5QayIOUePRGw/A/zIKU+ZNOBUJRDick+whbpmVAfQ0oDj5DSgICUaVCF9/IgpWHwJMzcRGuJ6cBYz14U0Fn/uF47lZDc6bzaPw2gK/FevZGY0Xi+1y0tf4okGtnOusZK3KdEEyWaUnKcteRobJujmRLNlbhfiQdca50f1LpZKsP9Q/6iaYDJ87PIlyNrCzfbbmwLJSKUaKlEK4p4ZyzitbDN0VqJNkq0VaIdJcfOrOUu2xTtleigREclOlFSbM9abrVN0VmJB5XookRX0n1De8u6s22Sbkp0V6KHEj1JSVpb1t1sk/RSorcSfZR4yPXFVEBuBK4muVEn4bicipVALieOFycWK4VkLsWRuQySmePNXsXKIZnLMWSWm+QWJLfcwpN8G5R8G0/yHVDyHTzJH4eSP86TfDeUfDdP8r1Q8r0MyQvKTUjuggypC2OpkTer726V4I+J8UffRtVSX1rK9l7+uOiYqIxUry7kzFPGjoqJUqJvRqozXgzXP9nJLfrUSLlK9HPeW1L6fhRsOp54E+HE6Zh9oPRyL5Ld/R1PuTurMrZ3O/2VGKDEQCUeptwanrLcUfW3zTFIiUeUGKzEo//qPt3+U+9IJYYoMVSJYf/2Nj3SNoe+rh5TIlqJ4aR7z0EBVLk7hV+JEUqMVCKGkCJL4lK2CWKViFMiXolRpB78lnWsbZLRSiQooUMSSUmiLOvRtkmSlBirxDglxru+3CNkMvYLvGgOkibr2rH0w3l+ZQ49N1JMgH75FA1FsTQSAbUxERPaMz0ohp9gWU+0NfwkJSYroT9Qnera8C1lCuY4P4fhU3TtWPoRPIbH/mx+GmRlPxTF0gj0TX6RjAntmR4Uw0+zrJNtDa99M12JGUrMdG34VnI65riRHIbXVYPXWwyP4VMgp8yCrDwSimJppBXUxmxMaM/0oBh+lmU929bwc5SYq8Q8Jeb/8zMlp72Syc5BQmLGWOB4phD3P2Lpi2IB9mHNQo8+FVxI+FRQTodKXET5WNDpX3gp4WKGn5JbyxnYVIvlGKqaA3Ow9HE8Q3UOtPFLoHEZC0WxNNIaaiMVE9ozPShDdYllnWo7VNOUSFciQ4mlpJm1EPNcPMufmizSFzKWfxTPn5osg3waD0U5lxjqXiE9FZZhVFnuEVWWU6gyAypxBc8fm6wMqojufd5GzsRMPpqDKzP1iMDSJ/BwBbPvKkie0VAUSyNtoDZWY0J7pgeFK6ss69W2XFmjxFol1imxnjS1lmOeG8PClRV6KGD5E3m4sgHy6RgoyrnEMPcK6amwAbswN3rElY0UrsyEStzEw5XNQRXRvc/bylmYyZM4uDJLjwgs/VgerqyBRNwCyZMERbE0Aj1sTmzFhPZMDwpXtljW9n9Gt02J7UrsUGInaWptxDw3joUr+mP0zVj+8TxceRzy6TgoyrnEcPcK6anwOMaVXR5xZReFK7OgEnfzcGVPUEV07/N2cjZm8gkcXJmtRwSWfiIPV7ZBIu6F5ME+ZGZppB3Uxj5MaM/0oHBlr2W9z5Yr+5V4QokDSjxJmlq7MM9NYuHKbj0UsPyTebjyFOTTSVCUc4kR7hXSU+EpjCsHPeLKQQpXoM/qxNM8XHkmqCK693l7CX7AMYWDK/rDx/1Y+qk8XNkPifgsJM8UKIqlkfZQG89hQnumB4Urz1rWz9ly5XklXlDikBIvkqbWQcxz01i48rQeClj+ZB6uvAT5FPvLJOcSk90rpKfCSxhXDnvElcMUrmCfzR7h4crLQRXRvc87yLmYyVM4uDJXjwgs/XQerjwPifgKJE8KFMXSSAeojVcxoT3Tg8KVVyzrV225clSJY0q8psTrpKl1GPPcDBauHNFDAcs/k4crb0A+nQFFOZZoEL5wo6fCGxhXjnvEleMUrsyFSjzBw5U3gykiwecd5TzM5LM4uDJPjwgs/WwerhyFRHwLkgf7U1yWRqA3LwiJCe2ZHhSuvGVZS1uuKCXeVuKkEqdIU+s45rk5LFw5oYcCln8uD1fegXw6B4pyLFEQuKKnwjsYV971iCvvUrgyDyrxNA9XzgRTRILPO8n5mMnncXBlvh4RWPr5PFxRkIjvQfLMg6JYGukEtfE+JrRnelC48p5l/b4tVz5Q4qwS55T4kDS13sU8t4CFK6f1UMDyL+ThykeQTxdAUY4lhhC4oqfCRxhXznvElfMUrsyHSrzAw5WLwRSR4PPOEvsCUsgiDq4s0CMCS7+YhysfQCJeguRZBEWxNNIZauNjTGjP9KBw5ZJl/bEtVz5R4lMlPlPic9LUOo95bgkLVy7ooYDlT+XhyheQT7HvbDmWGErgip4KX2BcuewRVy5TuLIAKvFLHq58FUwRCT5/UIJfEkvj4MpCPSKw9Ok8XPkEEvFrSB7o2VI8jTwItfENJrRnelC48rVl/Y0tV64o8a0SV5X4jjS1LmM9ZrBw5Us9FLD8S3m48j3k0wwoyrHEMAJX9FT4HuPKNY+4co3ClYVQiT/wcOXHYIpI8HkXuQgz+TIOrizSIwJLv5yHK1cgEX+C5MG+x8zSCPQaUvEzJrRnelC48pNl/bMtV35R4lclrivxG2lqXcM8t4KFKz/ooYDlX8nDld8hn66AohxLDCdwRU+F3zGu3PCIKzcoXIF+sBd/8HDlz2CKSPB5Vwk+VGIVB1cW6xGBpV/Nw5VfIBH/guTBvpXP0khXqI2bmNCe6UHhyl+W9U1brtxSpk+ZhjIFaWrdwDy3hoUrf+ihgOVfy8IV04R8ugaKciwxgsCVxbpGaIfMEG+4YoZQuLIYKjEbC1fM7MEUkeDzbnIJZvJ1HFxZokcEln49D1duQSLmgORZB0WxNNINaiMUE9ozPQhcMXNY1qF2XDFzKjOXMnMrMw9paoG/69vAwRUzmx4KWP6NPFzJC/kUe9qLY4nJBK4s0TViXMnnEVfyUbiyBCoxPw9XwoIpIsHn3WUqZvJNHFxJ1SMCS7+ZhStmTkjEApA8m6Aolka6Q20UxIT2TA8KVwpY1gVtuVJImYWVWUSZRUlTKx/muS0sXMmvhwKWfysPV4pBPsWeXeRUokHYottToRjGleIecaU4hSvQY1zNEjxcKRlEEX0EEXtI8MGPLO8xS9MjAku/nYcrhSARS0HybIOiWBrpAbVRGhPaMz0oXCllWZe25UoZZZZVZjllhpOmVnHMcztYuFJCDwUs/04erpSHfLoDinIqUVC4oqdCeYwrFTziSgUKV7ASK/JwpVIQRfQRROwp0zGTs7wlMl2PCCz9Lh6ulIFErAzJgz3Pj6WRnlAbVTChPdODwpXKlnUVW65UVWY1ZVZX5j2kqVUB89xuFq5U1EMBy7+Hhys1IJ/uhqKcSgyhcEVPhRrY0K7pEVdqUriSDpVYi4crtYMooo8gYi+ZgZmc4x28MkOPCCz9Ph6uVIVErAPJgz2dkqWRXlAbdTGhPdODwpU6lnVdW67UU2Z9ZTZQ5r2kqVUT89x+Fq7U0kMBy/8ED1caQj7dD0U5lRhK4YqeCg0xrjTyiCuNKFzBdrsxD1fuC6KIPoKIveVSzOQHOLhye0Rg6Z/k4Uo9SMQmkDwHoCiWRnpDbTTFhPZMDwpXmljWTW250kyZzZV5vzIfIE2tRpjnnmLhSmM9FLD8B3m40gLyKfbUY6cSwyhc0QK3wLgS4RFXIihcWQqV2JKHK62CKKKPIGIfib2aLeRpDq4s0yMCS/8MD1eaQSK2huR5GopiaaQP1EYbTGjP9KBwpbVl3caWK22V2U6Z7ZXZgTS1IjDPPcvClZZ6KGD5n+PhSkfIp9gzvJ1KDKdwRU+FjhhXOnnElU4UrkBf9DI783DlwSCK6COI+JAEX573PAdXlusRgaV/gYcr0AuxzC6QPM9DUSyNPAS10RUT2jM9KFzpYll3teVKN2V2V2YPZfYkTa1OmOcOsXClsx4KWP4XebjSC/LpISjKqcQIClf0VOiFcaW3R1zpTeHKcqjEPjxceSiIIvoIIvaVKzCTv8TBlRV6RGDpD/NwBfviR19IHuy9FiyN9IXa6IcJ7ZkeFK70taz72XKlvzIHKHOgMh8mTa3emOeOsHCljx4KWP6XebgyCPLpESjKqcRkClf0VBiEceURj7jyCIUrK6ASB/Nw5dEgiugjiNhPgi/bfoWDKyv1iMDSv8rDlf6QiJGQPNhbWlgagYhhDsGE9kwPClciLeshtlwZqsxhyoxS5mOkqfUI5rmjLFwZrIcClv8YD1eiIZ8ehaIcSjR8FK7oqRCNcWW4R1wZTuHKSqhEPw9XRgRPxMxddCtif7kKM/lrHFxZpUcElv51Hq4MhUQcCcnzGhTF0giGxxhMaM/0oHBlpGUdY8uVWGXGKTNemaNIU2s45rk3WLji10MBy3+chyujIZ9ib/9yKFH4KFzRU2E0xpUEj7iSQOEK9MAjcwwPVxKDJ2LmLroVcYBcjZn8BAdXVusRgaV/k4crsZCISZA8J6AolkYGQG2MxYT2TA8KV5Is67G2XBmnzPHKnKDMiaSplYB57i0WrujGErH8kocr2EvPsXfZOZQY4qNwRU+FSRhXJnvElckUrqyGSpzCw5WpwRMxcxfdijhQrsFMrji4skaPCCz92zxcGQeJiL0mWkFRLI0MhNpIxoT2TA8KV6ZZ1sm2XElR5nRlzlDmTNLUmox57iQLV6booYDlP8XDFey9piehKIcSQ30UruipMAvjymyPuDKbwpU1UIlzeLgyN3giZu6iWxEflmsxk7/DwZW1ekRg6d/l4Qr0MncTexPkO1AUSyMPQ23Mx4T2TA8KV+ZZ1vNtubJAmQuVuUiZi0lTazbmudMsXJmjhwKW/wwPV7CXPZ2GohxKDPNRuKKnAvYwXDPVI66kUriyFioxjYcr6cETMXMX3Yo4SK7DTP4eB1fW6RGBpX+fhyvQO99M7PU42NuKWRoZBLWxFBPaMz0oXMmwrJfacmWZMpcrU38Cv5I0tcBHrX7AwpU0PRSw/Gd5uIK9z+EDKMqhxHAfhSt6KmAf+pqrPeLKagpXoAd/m2t4uLI2eCJm7qJbER+R6zGTn+Pgyno9IrD0H/JwBftuE/YE/HNQFEsjj0BtrMeE9kwPClfWWdbrbbmyQZkblblJmZtJUwv8SPEjFq7on5fAXxGc5+EK9pDbj6AohxIjfBSu6KmwBePKVo+4spXCFehyMrfxcGV78ETM3EW3Ig6WGzCTX+Dgip4PYPqLPFzZAImIPRb0AhTF0shgqI2dmNCe6UHhyg7LeqctVx5X5i5l7lbmHtLU2op57hILV7bpoYDl/5iHK9hz7C5BUQ4lJvsoXNFTYS/GlX0ecWUfhSvY7NjPw5Ungidi5i5aS0wHRnv2YoDSxfSVnEpI7nTe2w7aB12M+/VOYlY7wDPwhPUPlQ7YDrwnlfmUMg8q82lCEnnWkuNJ2xzPKPNZZT6nzOddqx0Gqv1MKsNdRFjmSzWcsoex6Jf1ujC5xXZjX1DmIWW+qMyXKOKdsYj3gm2Ow8o8osyXlfkKJcfjWcvdtileVeZRZR5T5muUFFlgl9tsU7yuzDeUeVyZJ0g3D69a1q/bJnlTmW8pUypTkZIctqzftE3ytjJPKvOUMt9xfTEVlJuQGad/qn47lXKH4HTmvMA8LArEFOMoLh9C5o1IEPLir92tEvwxMf7o29ZY6ktL2d7LHxcdE5WRikwc5zd6/ueMsaNiopT5bkZqqstbBeRmKps+c6rzbvy9UyP97506/WvHTg0z64SOXRq+9KxtOZ21PIPtEHK/dybU/T1XNoeY72/d0jcUp6GbiTPAhv2tQOwe5TSwPf/W0k5VWCz9Hpul38Oe+Q59gmi+D1wehBrfxzRz/fkl8gl4Ts9Sc9pFXzE3LXb5gM0uH6Q7X7s3b4chdjnLY5ezaVCNbj9bQn5cCs0J3JWE6tzIpzB5gE0sDsSUQBi+GQna8v9v81sWm59js/k5wOa3bochNv+Qx+YfpkE1uv30DcmuHfxhKsN5s+fkOGtePZ85zpuPjUxI9px5OHrKmSuV+xrP7upm/iOeazy7PnMadPWeZ7h6dfbzHL+/0U7TZ4b7csz/r3TO60rnCzw662v/ArYfFxl01tkvsul8Ee7LMf+/0jmXK50v8eicS58Z24+PGXTW2T/mmMb6RpF4ZqcWc/33NtmpAkDc875VRYoWK16iZKnSZcqWCy9foWKlylWqVqt+T42atWrXqVuvfoN7GzZqfF+Tps2a3/9Ai4iWrVq3aduufYeOnTo/2KVrt+49evbq3eehvv36Dxj48KBHBj8aOWTosKjHoof7R4yMiY2LHzU6YUxi0thx4ydMnDR5ytRpMlmmyOlyhpwpZ8nZco6cK+fJ+XKBXCgXycVyiUyVaTJdZsilcplcLlfIlXKVXC3XyLVynVwvN8iNcpPcLLfIrXKb3C53yJ3ycblL7pZ75N7zviI+Q5gh2bLnCM2ZK3eevPnyhxUoWKhw6nlf8/SUrS2H+hOmpZ88lePKz2+9Hp2a+t9DckGAYysCHNsS4Nj+AMcOBTj2RoBjpwMcuxTg2JUAx67/85gyzEAH8wc6WCrQwaqBDjYIdLBFoIOdAx3sG+jg0EAH4wMdnBTo4JxABzMCHdwQ6ODuQAefDXTwaKCDJwMd/CjAQVEk0MHygQ7WCnSwSaCDbQMd7BHo4KBAB/2BDiYFOpgS6OCiQAdXBTq4LdDBA4EOvhTo4IlAB98LdPCTQAevBjr4e4CDZrZABwsEOlgm0MHqgQ42DHSwZaCDXQId7B/oYFSgg6OtB9OfGOZPiBqa6B8bNdgfN1bDZFXKttbxcWMSM1K2t8n8X0VSdnSMS4yKjkrY0qdBfYDid/37wu7+vS9lz+0bkmGRiZGt40dNuHMaX1Y9d058VyaxrZ0/KmYYkGJvK39cZMKEzPBuo5b+7wTm9rajkyJjxvwjp0jZ3ikpdlTHx9LvhIbend0Asxt22X1b2vjH3jlbVg1beyXGj0pLz2r7fxuR/oJVvMwtHjw6KT7RHxWXuPLu8nK5k0Hc/e9zeyxjrqwT2+yH2PXfhJZt8WXtj82/MrZ0SYqx6OYY3itpSICzb+kSPzY9gA/uEiP3nXb+D1apQzbk0gEA",
+    "debug_symbols": "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",
+    "file_map": {
+      "17": {
+        "source": "// Exposed only for usage in `std::meta`\npub(crate) mod poseidon2;\n\nuse crate::default::Default;\nuse crate::embedded_curve_ops::{\n    EmbeddedCurvePoint, EmbeddedCurveScalar, multi_scalar_mul, multi_scalar_mul_array_return,\n};\nuse crate::meta::derive_via;\nuse crate::static_assert;\n\n/// The size of the state accepted by the backend in `poseidon2_permutation`.\nglobal POSEIDON2_CONFIG_STATE_SIZE: u32 = poseidon2_config_state_size();\n\n#[foreign(sha256_compression)]\n// docs:start:sha256_compression\npub fn sha256_compression(input: [u32; 16], state: [u32; 8]) -> [u32; 8] {}\n// docs:end:sha256_compression\n\n#[foreign(keccakf1600)]\n// docs:start:keccakf1600\npub fn keccakf1600(input: [u64; 25]) -> [u64; 25] {}\n// docs:end:keccakf1600\n\n#[foreign(blake2s)]\n// docs:start:blake2s\npub fn blake2s<let N: u32>(input: [u8; N]) -> [u8; 32]\n// docs:end:blake2s\n{}\n\n// docs:start:blake3\npub fn blake3<let N: u32>(input: [u8; N]) -> [u8; 32]\n// docs:end:blake3\n{\n    if crate::runtime::is_unconstrained() {\n        // Temporary measure while Barretenberg is main proving system.\n        // Please open an issue if you're working on another proving system and running into problems due to this.\n        crate::static_assert(\n            N <= 1024,\n            \"Barretenberg cannot prove blake3 hashes with inputs larger than 1024 bytes\",\n        );\n    }\n    __blake3(input)\n}\n\n#[foreign(blake3)]\nfn __blake3<let N: u32>(input: [u8; N]) -> [u8; 32] {}\n\n// docs:start:pedersen_commitment\npub fn pedersen_commitment<let N: u32>(input: [Field; N]) -> EmbeddedCurvePoint {\n    // docs:end:pedersen_commitment\n    pedersen_commitment_with_separator(input, 0)\n}\n\n#[inline_always]\npub fn pedersen_commitment_with_separator<let N: u32>(\n    input: [Field; N],\n    separator: u32,\n) -> EmbeddedCurvePoint {\n    let mut points = [EmbeddedCurveScalar { lo: 0, hi: 0 }; N];\n    for i in 0..N {\n        points[i] = EmbeddedCurveScalar::from_field(input[i]);\n    }\n    let generators = derive_generators(\"DEFAULT_DOMAIN_SEPARATOR\".as_bytes(), separator);\n    multi_scalar_mul(generators, points)\n}\n\n// docs:start:pedersen_hash\npub fn pedersen_hash<let N: u32>(input: [Field; N]) -> Field\n// docs:end:pedersen_hash\n{\n    pedersen_hash_with_separator(input, 0)\n}\n\n#[no_predicates]\npub fn pedersen_hash_with_separator<let N: u32>(input: [Field; N], separator: u32) -> Field {\n    let mut scalars: [EmbeddedCurveScalar; N + 1] = [EmbeddedCurveScalar { lo: 0, hi: 0 }; N + 1];\n    let mut generators: [EmbeddedCurvePoint; N + 1] =\n        [EmbeddedCurvePoint::point_at_infinity(); N + 1];\n    crate::assert_constant(separator);\n    let domain_generators: [EmbeddedCurvePoint; N] =\n        derive_generators(\"DEFAULT_DOMAIN_SEPARATOR\".as_bytes(), separator);\n\n    for i in 0..N {\n        scalars[i] = EmbeddedCurveScalar::from_field(input[i]);\n        generators[i] = domain_generators[i];\n    }\n    scalars[N] = EmbeddedCurveScalar { lo: N as Field, hi: 0 as Field };\n\n    let length_generator: [EmbeddedCurvePoint; 1] =\n        derive_generators(\"pedersen_hash_length\".as_bytes(), 0);\n    generators[N] = length_generator[0];\n    multi_scalar_mul_array_return(generators, scalars, true)[0].x\n}\n\n#[field(bn254)]\n#[inline_always]\npub fn derive_generators<let N: u32, let M: u32>(\n    domain_separator_bytes: [u8; M],\n    starting_index: u32,\n) -> [EmbeddedCurvePoint; N] {\n    crate::assert_constant(domain_separator_bytes);\n    crate::assert_constant(starting_index);\n    __derive_generators(domain_separator_bytes, starting_index)\n}\n\n#[builtin(derive_pedersen_generators)]\n#[field(bn254)]\nfn __derive_generators<let N: u32, let M: u32>(\n    domain_separator_bytes: [u8; M],\n    starting_index: u32,\n) -> [EmbeddedCurvePoint; N] {}\n\npub fn poseidon2_permutation<let N: u32>(input: [Field; N]) -> [Field; N] {\n    static_assert(\n        N == POSEIDON2_CONFIG_STATE_SIZE,\n        f\"the input length must equal the state size in the Poseidon2 config; expected {POSEIDON2_CONFIG_STATE_SIZE}, got {N}\",\n    );\n    poseidon2_permutation_internal(input)\n}\n\n#[foreign(poseidon2_permutation)]\nfn poseidon2_permutation_internal<let N: u32>(input: [Field; N]) -> [Field; N] {}\n\n#[foreign(poseidon2_config_state_size)]\ncomptime fn poseidon2_config_state_size() -> u32 {}\n\n// Generic hashing support.\n// Partially ported and impacted by rust.\n\n// Hash trait shall be implemented per type.\n#[derive_via(derive_hash)]\npub trait Hash {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher;\n}\n\n// docs:start:derive_hash\ncomptime fn derive_hash(s: TypeDefinition) -> Quoted {\n    let name = quote { $crate::hash::Hash };\n    let signature = quote { fn hash<H>(_self: Self, _state: &mut H) where H: $crate::hash::Hasher };\n    let for_each_field = |name| quote { _self.$name.hash(_state); };\n    crate::meta::make_trait_impl(\n        s,\n        name,\n        signature,\n        for_each_field,\n        quote {},\n        |fields| fields,\n    )\n}\n// docs:end:derive_hash\n\n// Hasher trait shall be implemented by algorithms to provide hash-agnostic means.\n// TODO: consider making the types generic here ([u8], [Field], etc.)\npub trait Hasher {\n    fn finish(self) -> Field;\n\n    /// Returns the hash value without consuming the hasher.\n    /// Override this for more efficient implementations that avoid copying.\n    /// TODO: deprecate finish() and replace it\n    fn finish_ref(&self) -> Field {\n        (*self).finish()\n    }\n\n    fn write(&mut self, input: Field);\n}\n\n// BuildHasher is a factory trait, responsible for production of specific Hasher.\npub trait BuildHasher {\n    type H: Hasher;\n\n    fn build_hasher(self) -> H;\n}\n\npub struct BuildHasherDefault<H>;\n\nimpl<H> BuildHasher for BuildHasherDefault<H>\nwhere\n    H: Hasher + Default,\n{\n    type H = H;\n\n    fn build_hasher(_self: Self) -> H {\n        H::default()\n    }\n}\n\nimpl<H> Default for BuildHasherDefault<H>\nwhere\n    H: Hasher + Default,\n{\n    fn default() -> Self {\n        BuildHasherDefault {}\n    }\n}\n\nimpl Hash for Field {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self);\n    }\n}\n\nimpl Hash for u8 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as Field);\n    }\n}\n\nimpl Hash for u16 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as Field);\n    }\n}\n\nimpl Hash for u32 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as Field);\n    }\n}\n\nimpl Hash for u64 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as Field);\n    }\n}\n\nimpl Hash for u128 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as Field);\n    }\n}\n\nimpl Hash for i8 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as u8 as Field);\n    }\n}\n\nimpl Hash for i16 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as u16 as Field);\n    }\n}\n\nimpl Hash for i32 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as u32 as Field);\n    }\n}\n\nimpl Hash for i64 {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as u64 as Field);\n    }\n}\n\nimpl Hash for bool {\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        H::write(state, self as Field);\n    }\n}\n\nimpl Hash for () {\n    fn hash<H>(_self: Self, _state: &mut H)\n    where\n        H: Hasher,\n    {}\n}\n\nimpl<T, let N: u32> Hash for [T; N]\nwhere\n    T: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        for elem in self {\n            elem.hash(state);\n        }\n    }\n}\n\nimpl<T> Hash for [T]\nwhere\n    T: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.len().hash(state);\n        for elem in self {\n            elem.hash(state);\n        }\n    }\n}\n\nimpl<A> Hash for (A,)\nwhere\n    A: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n    }\n}\n\nimpl<A, B> Hash for (A, B)\nwhere\n    A: Hash,\n    B: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n    }\n}\n\nimpl<A, B, C> Hash for (A, B, C)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n    }\n}\n\nimpl<A, B, C, D> Hash for (A, B, C, D)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E> Hash for (A, B, C, D, E)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E, F> Hash for (A, B, C, D, E, F)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n    F: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n        self.5.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E, F, G> Hash for (A, B, C, D, E, F, G)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n    F: Hash,\n    G: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n        self.5.hash(state);\n        self.6.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E, F, G, H_> Hash for (A, B, C, D, E, F, G, H_)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n    F: Hash,\n    G: Hash,\n    H_: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n        self.5.hash(state);\n        self.6.hash(state);\n        self.7.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E, F, G, H_, I> Hash for (A, B, C, D, E, F, G, H_, I)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n    F: Hash,\n    G: Hash,\n    H_: Hash,\n    I: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n        self.5.hash(state);\n        self.6.hash(state);\n        self.7.hash(state);\n        self.8.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E, F, G, H_, I, J> Hash for (A, B, C, D, E, F, G, H_, I, J)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n    F: Hash,\n    G: Hash,\n    H_: Hash,\n    I: Hash,\n    J: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n        self.5.hash(state);\n        self.6.hash(state);\n        self.7.hash(state);\n        self.8.hash(state);\n        self.9.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E, F, G, H_, I, J, K> Hash for (A, B, C, D, E, F, G, H_, I, J, K)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n    F: Hash,\n    G: Hash,\n    H_: Hash,\n    I: Hash,\n    J: Hash,\n    K: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n        self.5.hash(state);\n        self.6.hash(state);\n        self.7.hash(state);\n        self.8.hash(state);\n        self.9.hash(state);\n        self.10.hash(state);\n    }\n}\n\nimpl<A, B, C, D, E, F, G, H_, I, J, K, L> Hash for (A, B, C, D, E, F, G, H_, I, J, K, L)\nwhere\n    A: Hash,\n    B: Hash,\n    C: Hash,\n    D: Hash,\n    E: Hash,\n    F: Hash,\n    G: Hash,\n    H_: Hash,\n    I: Hash,\n    J: Hash,\n    K: Hash,\n    L: Hash,\n{\n    fn hash<H>(self, state: &mut H)\n    where\n        H: Hasher,\n    {\n        self.0.hash(state);\n        self.1.hash(state);\n        self.2.hash(state);\n        self.3.hash(state);\n        self.4.hash(state);\n        self.5.hash(state);\n        self.6.hash(state);\n        self.7.hash(state);\n        self.8.hash(state);\n        self.9.hash(state);\n        self.10.hash(state);\n        self.11.hash(state);\n    }\n}\n\n// Some test vectors for Pedersen hash and Pedersen Commitment.\n// They have been generated using the same functions so the tests are for now useless\n// but they will be useful when we switch to Noir implementation.\n#[test]\nfn assert_pedersen() {\n    assert_eq(\n        pedersen_hash_with_separator([1], 1),\n        0x1b3f4b1a83092a13d8d1a59f7acb62aba15e7002f4440f2275edb99ebbc2305f,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1], 1),\n        EmbeddedCurvePoint {\n            x: 0x054aa86a73cb8a34525e5bbed6e43ba1198e860f5f3950268f71df4591bde402,\n            y: 0x209dcfbf2cfb57f9f6046f44d71ac6faf87254afc7407c04eb621a6287cac126,\n        },\n    );\n\n    assert_eq(\n        pedersen_hash_with_separator([1, 2], 2),\n        0x26691c129448e9ace0c66d11f0a16d9014a9e8498ee78f4d69f0083168188255,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2], 2),\n        EmbeddedCurvePoint {\n            x: 0x2e2b3b191e49541fe468ec6877721d445dcaffe41728df0a0eafeb15e87b0753,\n            y: 0x2ff4482400ad3a6228be17a2af33e2bcdf41be04795f9782bd96efe7e24f8778,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3], 3),\n        0x0bc694b7a1f8d10d2d8987d07433f26bd616a2d351bc79a3c540d85b6206dbe4,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3], 3),\n        EmbeddedCurvePoint {\n            x: 0x1fee4e8cf8d2f527caa2684236b07c4b1bad7342c01b0f75e9a877a71827dc85,\n            y: 0x2f9fedb9a090697ab69bf04c8bc15f7385b3e4b68c849c1536e5ae15ff138fd1,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3, 4], 4),\n        0xdae10fb32a8408521803905981a2b300d6a35e40e798743e9322b223a5eddc,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3, 4], 4),\n        EmbeddedCurvePoint {\n            x: 0x07ae3e202811e1fca39c2d81eabe6f79183978e6f12be0d3b8eda095b79bdbc9,\n            y: 0x0afc6f892593db6fbba60f2da558517e279e0ae04f95758587760ba193145014,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3, 4, 5], 5),\n        0xfc375b062c4f4f0150f7100dfb8d9b72a6d28582dd9512390b0497cdad9c22,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3, 4, 5], 5),\n        EmbeddedCurvePoint {\n            x: 0x1754b12bd475a6984a1094b5109eeca9838f4f81ac89c5f0a41dbce53189bb29,\n            y: 0x2da030e3cfcdc7ddad80eaf2599df6692cae0717d4e9f7bfbee8d073d5d278f7,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3, 4, 5, 6], 6),\n        0x1696ed13dc2730062a98ac9d8f9de0661bb98829c7582f699d0273b18c86a572,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3, 4, 5, 6], 6),\n        EmbeddedCurvePoint {\n            x: 0x190f6c0e97ad83e1e28da22a98aae156da083c5a4100e929b77e750d3106a697,\n            y: 0x1f4b60f34ef91221a0b49756fa0705da93311a61af73d37a0c458877706616fb,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3, 4, 5, 6, 7], 7),\n        0x128c0ff144fc66b6cb60eeac8a38e23da52992fc427b92397a7dffd71c45ede3,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3, 4, 5, 6, 7], 7),\n        EmbeddedCurvePoint {\n            x: 0x015441e9d29491b06563fac16fc76abf7a9534c715421d0de85d20dbe2965939,\n            y: 0x1d2575b0276f4e9087e6e07c2cb75aa1baafad127af4be5918ef8a2ef2fea8fc,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3, 4, 5, 6, 7, 8], 8),\n        0x2f960e117482044dfc99d12fece2ef6862fba9242be4846c7c9a3e854325a55c,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3, 4, 5, 6, 7, 8], 8),\n        EmbeddedCurvePoint {\n            x: 0x1657737676968887fceb6dd516382ea13b3a2c557f509811cd86d5d1199bc443,\n            y: 0x1f39f0cb569040105fa1e2f156521e8b8e08261e635a2b210bdc94e8d6d65f77,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3, 4, 5, 6, 7, 8, 9], 9),\n        0x0c96db0790602dcb166cc4699e2d306c479a76926b81c2cb2aaa92d249ec7be7,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3, 4, 5, 6, 7, 8, 9], 9),\n        EmbeddedCurvePoint {\n            x: 0x0a3ceae42d14914a432aa60ec7fded4af7dad7dd4acdbf2908452675ec67e06d,\n            y: 0xfc19761eaaf621ad4aec9a8b2e84a4eceffdba78f60f8b9391b0bd9345a2f2,\n        },\n    );\n    assert_eq(\n        pedersen_hash_with_separator([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10),\n        0x2cd37505871bc460a62ea1e63c7fe51149df5d0801302cf1cbc48beb8dff7e94,\n    );\n    assert_eq(\n        pedersen_commitment_with_separator([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 10),\n        EmbeddedCurvePoint {\n            x: 0x2fb3f8b3d41ddde007c8c3c62550f9a9380ee546fcc639ffbb3fd30c8d8de30c,\n            y: 0x300783be23c446b11a4c0fabf6c91af148937cea15fcf5fb054abf7f752ee245,\n        },\n    );\n}\n",
+        "path": "std/hash/mod.nr",
+        "function_locations": [
+          {
+            "start": 572,
+            "name": "sha256_compression"
+          },
+          {
+            "start": 707,
+            "name": "keccakf1600"
+          },
+          {
+            "start": 852,
+            "name": "blake2s"
+          },
+          {
+            "start": 950,
+            "name": "blake3"
+          },
+          {
+            "start": 1437,
+            "name": "__blake3"
+          },
+          {
+            "start": 1555,
+            "name": "pedersen_commitment"
+          },
+          {
+            "start": 1784,
+            "name": "pedersen_commitment_with_separator"
+          },
+          {
+            "start": 2188,
+            "name": "pedersen_hash"
+          },
+          {
+            "start": 2345,
+            "name": "pedersen_hash_with_separator"
+          },
+          {
+            "start": 3339,
+            "name": "derive_generators"
+          },
+          {
+            "start": 3698,
+            "name": "__derive_generators"
+          },
+          {
+            "start": 3776,
+            "name": "poseidon2_permutation"
+          },
+          {
+            "start": 4132,
+            "name": "poseidon2_permutation_internal"
+          },
+          {
+            "start": 4225,
+            "name": "poseidon2_config_state_size"
+          },
+          {
+            "start": 4536,
+            "name": "derive_hash"
+          },
+          {
+            "start": 5327,
+            "name": "Hasher::finish_ref"
+          },
+          {
+            "start": 5761,
+            "name": "<impl BuildHasher for BuildHasherDefault<H>>::build_hasher"
+          },
+          {
+            "start": 5893,
+            "name": "<impl Default for BuildHasherDefault<H>>::default"
+          },
+          {
+            "start": 6025,
+            "name": "<impl Hash for Field>::hash"
+          },
+          {
+            "start": 6155,
+            "name": "<impl Hash for u8>::hash"
+          },
+          {
+            "start": 6295,
+            "name": "<impl Hash for u16>::hash"
+          },
+          {
+            "start": 6435,
+            "name": "<impl Hash for u32>::hash"
+          },
+          {
+            "start": 6575,
+            "name": "<impl Hash for u64>::hash"
+          },
+          {
+            "start": 6716,
+            "name": "<impl Hash for u128>::hash"
+          },
+          {
+            "start": 6855,
+            "name": "<impl Hash for i8>::hash"
+          },
+          {
+            "start": 7001,
+            "name": "<impl Hash for i16>::hash"
+          },
+          {
+            "start": 7148,
+            "name": "<impl Hash for i32>::hash"
+          },
+          {
+            "start": 7295,
+            "name": "<impl Hash for i64>::hash"
+          },
+          {
+            "start": 7443,
+            "name": "<impl Hash for bool>::hash"
+          },
+          {
+            "start": 7590,
+            "name": "<impl Hash for ()>::hash"
+          },
+          {
+            "start": 7722,
+            "name": "<impl Hash for [T; N]>::hash"
+          },
+          {
+            "start": 7911,
+            "name": "<impl Hash for [T]>::hash"
+          },
+          {
+            "start": 8133,
+            "name": "<impl Hash for (A,)>::hash"
+          },
+          {
+            "start": 8302,
+            "name": "<impl Hash for (A, B)>::hash"
+          },
+          {
+            "start": 8518,
+            "name": "<impl Hash for (A, B, C)>::hash"
+          },
+          {
+            "start": 8781,
+            "name": "<impl Hash for (A, B, C, D)>::hash"
+          },
+          {
+            "start": 9091,
+            "name": "<impl Hash for (A, B, C, D, E)>::hash"
+          },
+          {
+            "start": 9448,
+            "name": "<impl Hash for (A, B, C, D, E, F)>::hash"
+          },
+          {
+            "start": 9852,
+            "name": "<impl Hash for (A, B, C, D, E, F, G)>::hash"
+          },
+          {
+            "start": 10306,
+            "name": "<impl Hash for (A, B, C, D, E, F, G, H_)>::hash"
+          },
+          {
+            "start": 10807,
+            "name": "<impl Hash for (A, B, C, D, E, F, G, H_, I)>::hash"
+          },
+          {
+            "start": 11355,
+            "name": "<impl Hash for (A, B, C, D, E, F, G, H_, I, J)>::hash"
+          },
+          {
+            "start": 11950,
+            "name": "<impl Hash for (A, B, C, D, E, F, G, H_, I, J, K)>::hash"
+          },
+          {
+            "start": 12593,
+            "name": "<impl Hash for (A, B, C, D, E, F, G, H_, I, J, K, L)>::hash"
+          },
+          {
+            "start": 13187,
+            "name": "assert_pedersen"
+          }
+        ]
+      },
+      "53": {
+        "source": "fn hash(v: [Field; 2]) -> Field {\n    std::hash::poseidon2_permutation([v[0], v[1], 0, 0])[0]\n}\nfn h4(a: Field, b: Field, c: Field, d: Field) -> Field {\n    hash([hash([a, b]), hash([c, d])])\n}\nfn h8(v: [Field; 8]) -> Field {\n    hash([h4(v[0], v[1], v[2], v[3]), h4(v[4], v[5], v[6], v[7])])\n}\n\nfn merkle(leaf: Field, siblings: [Field; 32], bits: [bool; 32]) -> (Field, Field) {\n    let mut node = leaf;\n    let mut index: u64 = 0;\n    for i in 0..32 {\n        let bit: Field = if bits[i] { 1 } else { 0 };\n        let left = if bits[i] { siblings[i] } else { node };\n        let right = if bits[i] { node } else { siblings[i] };\n        node = hash([left, right]);\n        if bits[i] { index = index + (1u64 << (i as u64)); }\n        assert(bit == (if bits[i] { 1 } else { 0 }));\n    }\n    (node, index as Field)\n}\n\n// Public values deliberately retain the exact 21-field order of the Circom\n// circuit.  The two-by-two private layout is unchanged.\nfn main(\n    chain_id: pub Field, pool: pub Field, domain: pub Field,\n    protocol_version: pub Field, circuit_version: pub Field,\n    operation: pub u8, root: pub Field, asset: pub Field,\n    public_amount: pub Field, is_deposit: pub bool, recipient: pub Field,\n    relayer: pub Field, relayer_fee: pub Field, input_count: pub u8,\n    output_count: pub u8, public_nullifiers: pub [Field; 2],\n    public_commitments: pub [Field; 2], public_cipher_hashes: pub [Field; 2],\n    spending_secret: Field,\n    input_enabled: [bool; 2], input_amount: [Field; 2],\n    input_secret: [Field; 2], input_nonce: [Field; 2],\n    input_diversifier: [Field; 2], input_path: [[Field; 32]; 2],\n    input_path_bits: [[bool; 32]; 2],\n    output_enabled: [bool; 2], output_amount: [Field; 2],\n    output_secret: [Field; 2], output_nonce: [Field; 2],\n    output_recipient_key: [Field; 2], output_diversifier: [Field; 2],\n    output_cipher_hash: [Field; 2]\n) {\n    let owner_domain = h4(domain, protocol_version, chain_id, pool);\n    let note_domain = h4(domain, protocol_version, circuit_version, chain_id);\n    let nullifier_domain = h4(domain + 1, protocol_version, circuit_version, pool);\n    let mut input_total: Field = 0;\n    let mut output_total: Field = 0;\n    let mut enabled_inputs: u8 = 0;\n    let mut enabled_outputs: u8 = 0;\n    for i in 0..2 {\n        if input_enabled[i] { enabled_inputs = enabled_inputs + 1; }\n        if output_enabled[i] { enabled_outputs = enabled_outputs + 1; }\n        if !input_enabled[i] {\n            assert(input_amount[i] == 0);\n            assert(input_secret[i] == 0);\n            assert(input_nonce[i] == 0);\n            assert(input_diversifier[i] == 0);\n        }\n        if !output_enabled[i] {\n            assert(output_amount[i] == 0);\n            assert(output_secret[i] == 0);\n            assert(output_nonce[i] == 0);\n            assert(output_recipient_key[i] == 0);\n            assert(output_diversifier[i] == 0);\n            assert(output_cipher_hash[i] == 0);\n            assert(public_commitments[i] == 0);\n            assert(public_cipher_hashes[i] == 0);\n        } else {\n            assert(output_amount[i] != 0);\n            assert(output_cipher_hash[i] == public_cipher_hashes[i]);\n        }\n        let owner = h4(owner_domain, spending_secret, input_diversifier[i], input_nonce[i]);\n        let commitment = h8([note_domain, pool, asset, input_amount[i], owner,\n            input_diversifier[i], input_nonce[i], input_secret[i]]);\n        let (computed_root, index) = merkle(commitment, input_path[i], input_path_bits[i]);\n        if input_enabled[i] {\n            assert(computed_root == root);\n            assert(h4(nullifier_domain, spending_secret, commitment, index) == public_nullifiers[i]);\n        } else { assert(public_nullifiers[i] == 0); }\n        let out_commitment = h8([note_domain, pool, asset, output_amount[i],\n            output_recipient_key[i], output_diversifier[i], output_nonce[i], output_secret[i]]);\n        if output_enabled[i] { assert(out_commitment == public_commitments[i]); }\n        input_total = input_total + input_amount[i];\n        output_total = output_total + output_amount[i];\n    }\n    assert(input_count == enabled_inputs);\n    assert(output_count == enabled_outputs);\n    assert(operation >= 1);\n    assert(operation <= 3);\n    assert(is_deposit == (operation == 1));\n    assert(input_total + (if is_deposit { public_amount } else { 0 }) ==\n        output_total + (if operation == 3 { public_amount } else { 0 }) + relayer_fee);\n    if operation == 2 { assert(public_amount == 0); }\n    if operation == 1 {\n        assert(root == 0);\n        assert(input_count == 0);\n        assert(output_count == 1);\n        assert(relayer_fee == 0);\n        assert(recipient == 0);\n    } else {\n        assert(root != 0);\n        assert(input_count != 0);\n    }\n    if operation == 3 { assert(recipient != 0); } else { assert(recipient == 0); }\n    assert(relayer == relayer);\n}",
+        "path": "/home/runner/workspace/lib/contracts/circuits/noir/src/main.nr",
+        "function_locations": [
+          {
+            "start": 32,
+            "name": "hash"
+          },
+          {
+            "start": 151,
+            "name": "h4"
+          },
+          {
+            "start": 224,
+            "name": "h8"
+          },
+          {
+            "start": 378,
+            "name": "merkle"
+          },
+          {
+            "start": 1886,
+            "name": "main"
+          }
+        ]
+      }
+    }
+  },
+  "warnings": []
+}

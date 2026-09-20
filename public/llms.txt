@@ -1,0 +1,50 @@
+# SealedCash
+
+> SealedCash is a non-custodial Robinhood Chain interface for wallet-authenticated chain reads, persistent private route intents, and wallet-approved automation risk policies. It does not currently execute swaps or move funds.
+
+Canonical website: https://sealedcash.com/
+Technical documentation: https://sealedcash.com/docs
+Official X account: https://x.com/Sealed_Cash
+Official GitHub organization: https://github.com/sealedcash-org
+
+## Verified live capabilities
+
+- Reown wallet connection restricted to Robinhood Chain Mainnet.
+- Robinhood Chain network identifier: EVM chain ID 4663.
+- Live read-only RPC data: latest block number and hash, block timestamp, gas price, RPC latency, and connected wallet native ETH balance.
+- Domain-bound wallet authentication backed by an HttpOnly session cookie.
+- Authenticated list and detail reads for persistent route intents owned by the connected wallet.
+- Wallet access is non-custodial. SealedCash does not request, receive, or store seed phrases or private keys.
+
+## Architecture
+
+The current backend foundation separates three concerns:
+
+1. Authenticate: prove control of a wallet with a domain-bound message and receive an HttpOnly session.
+2. Read: query Robinhood Chain Mainnet and wallet-owned route-intent records.
+3. Intent lifecycle API: create, EIP-712 sign, or cancel a persistent route intent through authenticated backend endpoints.
+
+The current web interface exposes route-intent list and detail reads only. It does not expose route creation, signing, or cancellation controls because no verified quote, solver, escrow, or execution path exists.
+
+## Privacy model and limitations
+
+Shielded settlement is not implemented, connected, or represented as live. The product uses privacy-first language without promising anonymity.
+
+SealedCash does not claim zero metadata or guaranteed anonymity. Privacy can be weakened by timing correlation, distinctive amounts, shielding and deshielding patterns, wallet behavior, browser and network metadata, RPC observations, liquidity-provider records, destination reuse, and endpoint logging.
+
+The product should be described as privacy-first and non-custodial, not as untraceable or anonymous by guarantee.
+
+## Current capability boundaries
+
+- Live: wallet connection and read-only Robinhood Chain Mainnet data.
+- Backend foundation: persistent wallet-owned route intents with authenticated list/detail reads and create/sign/cancel API states.
+- Web interface: authenticated route-intent list and detail reads; no route mutation controls.
+- Foundation: wallet-approved automation policies and persisted fail-closed policy decisions. Decisions require fresh quote, monitoring, and settlement evidence and never submit transactions in the current release.
+- Unavailable: executable quotes, verified liquidity providers, swaps, private balance settlement, solver, escrow, relayer operation, bridge execution, refunds, withdrawals, and fund movement.
+- Illustrative provider, quote, route, and order data must not be represented as live execution.
+
+## Technical references
+
+- Robinhood Chain connection guide: https://docs.robinhood.com/chain/connecting
+- Reown AppKit for React and Wagmi: https://docs.reown.com/appkit/react/core/installation?platform=wagmi
+- Reown custom networks: https://docs.reown.com/appkit/react/core/custom-networks

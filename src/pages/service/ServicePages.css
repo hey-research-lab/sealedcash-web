@@ -1,0 +1,213 @@
+.svc-root {
+  min-height: 100dvh;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.svc-root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 46% 38% at 82% 14%, rgba(205, 205, 205, 0.04) 0%, transparent 72%),
+    radial-gradient(ellipse 34% 28% at 58% 52%, rgba(160, 160, 160, 0.02) 0%, transparent 72%);
+  filter: blur(34px);
+}
+
+.svc-header {
+  position: relative;
+  z-index: 10;
+  padding: 24px clamp(24px, 5vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.svc-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.svc-header-logo img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(1) brightness(1.5);
+  opacity: 0.9;
+}
+
+.svc-header-name {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--silver);
+  font-family: var(--font-mono);
+}
+
+.svc-main {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 60px clamp(24px, 5vw, 60px);
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.svc-eyebrow {
+  color: var(--muted);
+  font: 500 11px/1 var(--font-sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.svc-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line-strong);
+}
+
+.svc-status-dot.active {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.svc-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -.035em;
+  margin: 0 0 24px;
+}
+
+.svc-lead {
+  color: var(--silver-soft);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 0 48px;
+}
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.svc-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+}
+
+.svc-card-header {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svc-card-value {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.svc-card-desc {
+  font-size: 13px;
+  color: var(--silver);
+  line-height: 1.5;
+}
+
+.svc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  border: 1px solid var(--line-strong);
+  background: rgba(0,0,0,0.5);
+  color: var(--silver);
+}
+
+.svc-badge.ready {
+  color: #fff;
+  border-color: rgba(255,255,255,0.3);
+}
+
+.svc-terminal {
+  margin-top: 48px;
+  background: #050505;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.svc-terminal-header {
+  background: #111;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.svc-terminal-body {
+  padding: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--silver);
+  line-height: 1.6;
+}
+
+.svc-terminal-line {
+  display: flex;
+  gap: 16px;
+}
+
+.svc-terminal-time {
+  color: var(--faint);
+  user-select: none;
+}
