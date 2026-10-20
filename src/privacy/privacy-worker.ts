@@ -205,6 +205,6 @@ if (typeof self !== "undefined") {
   self.onmessage = (event: MessageEvent<Request>) => {
     void prove(event.data)
       .then((result) => self.postMessage({ ok: true, result }))
-      .catch((error: unknown) => self.postMessage({ ok: false, error: error instanceof Error ? error.message : "proof_failed" }));
+      .catch((error: unknown) => self.postMessage({ ok: false, requestId: event.data.requestId, error: error instanceof Error ? error.message : "proof_failed" }));
   };
 }
